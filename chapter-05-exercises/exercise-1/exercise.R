@@ -13,7 +13,7 @@ my_height <- 66
 puppies <- 2
 
 # Create a variable `puppy_price`, which is how much you think a puppy costs
-puppy_price <- 100
+puppy_price <- 200
 
 # Create a variable `total_cost` that has the total cost of all of your puppies
 total_cost <- puppies * puppy_price
