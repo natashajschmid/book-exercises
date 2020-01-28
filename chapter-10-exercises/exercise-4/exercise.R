@@ -33,8 +33,18 @@ min(gates_money[ , "total_amount"])
 # Which organization received the largest grant?
 gates_money[gates_money[ , "total_amount"] == max(gates_money[ , "total_amount"]), "organization"]
 
-# Which organization received the smallest grant?
+
+# Which organization received the smallest grant, and how much was that?
 gates_money[gates_money[ , "total_amount"] == min(gates_money[ , "total_amount"]), "organization"]
 
+gates_money[gates_money$total_amount == min(gates_money$total_amount), c("organization", "total_amount")]
+
 # How many grants were awarded in 2010?
-nrow(gates_money)
+nrow(gates_money[gates_money$start_year == "2010", ])
+
+# How much money was awarded in 2010?
+total_amount
+start_year
+
+sum(gates_money[gates_money$start_year == "2010", "total_amount"])
+
