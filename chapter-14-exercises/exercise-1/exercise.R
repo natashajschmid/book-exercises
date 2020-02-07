@@ -43,7 +43,7 @@ search_endpoint <- "/search/repositories"
 # Search queries require a query parameter (for what to search for). Create a 
 # `query_params` list variable that specifies an appropriate key and value for 
 # the search term (you can search for anything you want!)
-query_params <- list(q="dplyr")
+query_params <- list(q="restaurants")
 
 # Send a GET request to the `search_endpoint`--including your params list as the
 # `query`. Print the response to show that your request worked.
@@ -55,12 +55,17 @@ body2 <- content(response2, "text")
 dplyr_content_to_df <- fromJSON(body2)
 View(dplyr_content_to_df)
 
-# could not figure out why "dplyr_content_to_df" is not a data frame, even though I
-# used the same steps that worked previously :(
+items <- dplyr_content_to_df$items
+is.data.frame(items)
 
 # How many search repos did your search find? (Hint: check the list names to 
 # find an appropriate value).
-
+#   30 search repos
 
 # What are the full names of the top 5 repos in the search results?
+#   1. emreeren/SambaPOS-3
+#   2. Thinkful-Ed/node-restaurants-app-mongoose
+#   3. jendewalt/yumhacker
+#   4. mjohnsullivan/nomnom
+#   5. 	JideGuru/FlutterFoodybite
 
