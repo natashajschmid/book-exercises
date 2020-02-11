@@ -1,0 +1,34 @@
+---
+title: "R Markdown Demo"
+author: "Natasha Schmid"
+date: "2/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+source("exercise.R") # load analysis file
+```
+
+## This is my report
+
+I like writing **reports**
+
+
+```{r example, include = FALSE}
+library(knitr)
+numbers <- runif(1:100)
+hist(numbers)
+numbers_mean <- mean(numbers)  # get the mean
+
+img_url <- "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=18w=500"
+
+img_markdown <- paste0("![puppies ](",img_url,")")
+
+letters <- c("a", "b", "c", "d")
+numbers <- 1:4
+df <- data.frame(letters = letters, numbers = numbers)
+```
+
+'r kable(df)'
+
