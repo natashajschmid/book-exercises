@@ -7,7 +7,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 library(knitr)
-source("exercise.R") # load analysis file
+source("exercise.R")
 ```
 
 ## This is my report
@@ -19,16 +19,25 @@ I like writing **reports**
 library(knitr)
 numbers <- runif(1:100)
 hist(numbers)
-numbers_mean <- mean(numbers)  # get the mean
+numbers_mean <- mean(numbers)
 
-img_url <- "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=18w=500"
+img_url <- "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 
 img_markdown <- paste0("![puppies ](",img_url,")")
+
 
 letters <- c("a", "b", "c", "d")
 numbers <- 1:4
 df <- data.frame(letters = letters, numbers = numbers)
 ```
 
-'r kable(df)'
+`r kable(df)`
+
+The mean of the numbers is **`r numbers_mean`**.
+
+`r img_markdown`
+
+```{r other_chunk}
+print("hello world")
+```
 
