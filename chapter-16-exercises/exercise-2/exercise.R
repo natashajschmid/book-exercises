@@ -69,7 +69,6 @@ ggplot(data = diamonds_sample) +
 # What looks nice?
 
 
-
 ## Coordinate Systems
 
 # Draw a bar chart with x-position and fill color BOTH mapped to cut
@@ -82,7 +81,6 @@ ggplot(data = diamonds_sample) +
 
 
 # Draw the same chart, but in a polar coordinate system. It's a Coxcomb chart!
-
 
 
 ## Facets
