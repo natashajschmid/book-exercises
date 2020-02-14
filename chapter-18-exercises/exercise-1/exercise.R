@@ -4,7 +4,6 @@ library("jsonlite")
 
 # Be sure and check the README.md for complete instructions!
 
-
 # Use `source()` to load your API key variable from the `apikey.R` file you made.
 # Make sure you've set your working directory!
 source("apikey.R")

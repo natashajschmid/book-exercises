@@ -40,4 +40,3 @@ The mean of the numbers is **`r numbers_mean`**.
 ```{r other_chunk}
 print("hello world")
 ```
-
